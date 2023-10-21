@@ -1,0 +1,75 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %} ">
+    <title>About</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav_box">
+            <nav>
+                <div class="img_box">
+                    <img class="logo"><a href="">LOGO</a></img>
+                </div>
+
+              <div class="burger">︾</div>
+            </nav>
+
+                <div class="list_box">
+                    <ul class="list">
+                        <li><a href="{% url 'home' %}">Main</a></li>
+                        <li><a href="{% url 'display_items' %}">Projects</a></li>
+                        <li><a href="{% url 'about' %}">About US</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="{% url 'service' %}">Services</a></li>
+                    </ul>
+                </div>
+        </div>
+
+
+<!--        carousel-->
+
+
+
+
+<!--        about content-->
+
+        <div class="about_box">
+            <h3 class="about-title">About Us</h3>
+            <p class="about_header">
+                In the ever-evolving landscape of digital design, Z & N Team stands as a beacon of innovation and creativity. We are not just a company; we are storytellers, artists, and engineers, passionate about weaving web narratives that captivate and engage.
+
+                Our journey began with a simple idea: to deliver digital solutions that would break the mold, blending stunning aesthetics with intuitive functionality. Today, with countless successful projects under our belt, we pride ourselves on being pioneers in responsive web page designs and state-of-the-art UI/UX solutions.
+
+                What sets us apart? It's our unwavering commitment to our clients' vision. We believe that every brand has a unique story waiting to be told. Our team of seasoned designers, developers, and strategists work closely with you, ensuring that your digital identity resonates with your ethos and values.
+
+                With Z & N Team, you aren't just getting a service; you're forging a partnership. We immerse ourselves in your world, understanding your challenges and goals, transforming them into digital masterpieces that stand testament to our craftsmanship. Every pixel we design, every line of code we craft, is infused with dedication, expertise, and a touch of magic.
+
+                Dive into the future with us. Let's create, innovate, and elevate the digital experience together.
+            </p>
+        </div>
+
+
+    </div>
+
+
+    <footer>
+        <div class="footer_box">
+            <div class="f_box_one">
+                <div class="social_icon">Facebook</div>
+                <div class="social_icon">Tweeter</div>
+                <div class="social_icon">Linkedin</div>
+                <div class="social_icon">Telegram</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="{% static 'main/js/burger.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'main/css/index.css' %} ">
+    <title>Service</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav_box">
+            <nav>
+                <div class="img_box">
+                    <img class="logo"><a href="">LOGO</a></img>
+                </div>
+
+              <div class="burger">︾</div>
+            </nav>
+
+                <div class="list_box">
+                    <ul class="list">
+                        <li><a href="{% url 'home' %}">Main</a></li>
+                        <li><a href="{% url 'display_items' %}">Projects</a></li>
+                        <li><a href="{% url 'about' %}">About US</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="{% url 'service' %}">Services</a></li>
+                    </ul>
+                </div>
+        </div>
+
+
+<!--        carousel-->
+
+        <div class="service-container">
+            <h3 class="service-header">
+                    Our Services
+            </h3>
+
+            <li class="service_list">UI/UX</li>
+            <li class="service_list">Responsive Web pages</li>
+            <li class="service_list">Logo Creating</li>
+            <li class="service_list">Figa</li>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer_box">
+            <div class="f_box_one">
+                <div class="social_icon">Facebook</div>
+                <div class="social_icon">Tweeter</div>
+                <div class="social_icon">Linkedin</div>
+                <div class="social_icon">Telegram</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="{% static 'main/js/burger.js' %}"></script>
+</body>
+</html>
