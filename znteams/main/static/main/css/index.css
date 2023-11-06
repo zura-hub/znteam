@@ -1,6 +1,9 @@
 body{
     overflowY: hidden;
+    font-family: 'Roboto Mono', monospace;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100&display=swap');
 
 * {
     margin: 0;
@@ -12,18 +15,35 @@ body{
     padding: 20px
 }
 
+.visitor{
+    margin-top: 15px;
+    color: white;
+    font-size:18px;
+    display: flex;
+}
+
 nav{
     display: flex;
     justify-content: space-between;
 }
 
+
+.firts{
+        display: none;
+}
+
+
 .burger{
-    display: flex;
-    cursor: pointer;
-    font-size: 24px;
+      display: flex;
+      cursor: pointer;
+      font-size: 25px;
+      color: white;
+      margin-top: 15px;
+      margin-right: 20px;
 }
 .list  a {
     color: white;
+    margin-top: 20px;
 }
 
 .list  a:hover {
@@ -31,20 +51,20 @@ nav{
 }
 
 .list{
-    position: absolute;
-    display:none;
-    right: 20px;
-    width: 170px;
-    list-style: none;
-    text-align: center;
-    cursor: pointer;
-    background: #201f1c8c;
-    border-radius:15px;
-    padding-bottom: 10px;
+  position: absolute;
+  display: none;
+  right: 20px;
+  width: 170px;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  background: #2B2C73;
+  padding-bottom: 10px;
+  height: 100vh;
 }
 
 li{
-    margin-top:10px;
+    margin-top: 37px;
 }
 
 .li{
@@ -56,11 +76,19 @@ a{
     color: black;
 }
 
+.logo{
+    width:60px;
+    height:60px;
+}
+
+nav{
+        background: #2B2C73;
+    }
 
 /*********** carousel ************/
 
 .carousel-container {
-    max-width: 500px;
+    max-width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -77,10 +105,12 @@ a{
     height: 100%;
 }
 
+
+
 .carousel-btn {
     position: relative;
     top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background:#2B2C73;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -104,6 +134,7 @@ a{
 .carousel_btn{
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
 
 .middle_text{
@@ -114,16 +145,18 @@ a{
 .contact_box{
     height: 320px;
     margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /*********** ABOUT ************/
 
 .about_header{
-    border: 1px solid orange;
-    padding: 10px;
-    background: orange;
+    border: 1px solid #2B2C73;
+    padding: 20px;
+    background:#2B2C73;
     border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
+    color: white;
+    line-height: 35px;
 }
 
 .f_box_one{
@@ -178,6 +211,7 @@ a{
 
 .contact_box{
     margin-top: 90px;
+
 }
 
 .contact_list{
@@ -190,6 +224,17 @@ a{
     margin-bottom: 70px;
 }
 
+.footer_box {
+        background: #2B2C73;
+        padding: 40px;
+        position: relative;
+        bottom: -5px;
+    }
+
+.social_icon{
+    color: white;
+}
+
 
 /*********** tablet ************/
 @media screen and (min-width: 768px){
@@ -198,46 +243,57 @@ a{
         padding: 40px
     }
 
+    .logo{
+        width:80px;
+        height:80px;
+    }
 
+
+    .firts{
+        display: none;
+    }
     /* BURGER */
     .burger{
         display:none;
     }
 
     .img_box{
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
+        width: 300px;
     }
 
     .list a{
-        color: black;
+        color: white;
+        margin-top:25px;
+        font-size: 18px;
     }
 
 
     li{
         display:flex;
+        margin-left: 25px;
     }
 
     .list{
         display:flex;
-        margin-top: -28px;
-        margin-right: 20px;
+        margin-top: -107px;
+        margin-right: 28px;
         position: absolute;
         right: 20px;
+        width:756px;
         list-style: none;
-        width:500px;
         text-align: center;
         cursor: pointer;
         background: none;
-        border-radius:15px;
+        border-radius: 15px;
         padding-bottom: 10px;
+        align-items: center;
+        height: 70px;
     }
 
-
-    li{
-        margin-left: 35px;
+    nav{
+        background: #2B2C73;
     }
+
 
     .list a:hover{
         border-bottom: 1px solid orange;
@@ -261,27 +317,39 @@ a{
         transition: transform 0.4s ease-in-out;
     }
 
-    .footer_box{
-        background:#6A5F5F;
+     .footer_box {
+        background: #2B2C73;
         padding: 40px;
+        position: relative;
+        bottom: -5px;
     }
 
 
    .projects_container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns */
+        gap: 10px;
     }
 
-    .project_box {
-        flex: 1;
-        margin: 10px;
-    }
+
 
     .item_img {
         max-width: 100%; /* Ensure the image doesn't overflow the container */
         height: 400px;
     }
+
+    .visitor{
+        display: none;
+    }
+
+    .firts{
+        display: flex;
+        margin-top: 58px;
+        color: white;
+        margin-left: 26%;
+        margin-right: 5%;
+    }
+
 
 }
 
@@ -294,28 +362,57 @@ a{
         padding: 40px
     }
 
+    .visitor{
+        display: none;
+    }
+
+    .logo{
+        width:100px;
+        height:100px;
+    }
 
     /* BURGER */
     .burger{
         display:none;
     }
 
-    .img_box{
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
+
+
+
+    nav{
+        background: #2B2C73;
     }
 
-
+    
     .list{
         display:flex;
-        margin-top: -28px;
-        margin-right: 20px;
+        margin-top: -105px;
+        margin-right: 19px;
+        position: absolute;
+        right: 20px;
+        width:800px;
+        list-style: none;
+        text-align: center;
+        cursor: pointer;
+        background: none;
+        border-radius: 15px;
+        padding-bottom: 10px;
+        align-items: center;
+        height: 70px;
     }
 
+    .firts{
+        margin-right: 25px;
+    }
 
-    li{
-        margin-left: 35px;
+    .list_box{
+        background: #2B2C73;
+    }
+
+    li a{
+        text-align: right;
+        color: white;
+        font-size: 23px;
     }
 
     li:hover{
@@ -340,8 +437,65 @@ a{
         transition: transform 0.4s ease-in-out;
     }
 
-    .footer_box{
-        background:#6A5F5F;
+    .img_box{
+        width: 300px;
+    }
+
+
+    .about_header{
+        margin-bottom: 190px;
+    }
+
+    .firts{
+        margin-top: 58px;
+        display: flex;
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+
+
+     .footer_box {
+        background: #2B2C73;
         padding: 40px;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .projects_container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Creates three equal-width columns */
+        gap: 10px;
+        margin-bottom:100px;
+    }
+
+    .project_box {
+        flex: 2;
+        margin: 10px;
+    }
+
+    .item_img {
+        max-width: 100%; /* Ensure the image doesn't overflow the container */
+        height: 400px;
+    }
+
+    .contact_box{
+        margin-bottom: 200px;
+    }
+
+    .service-container{
+        margin-bottom: 220px;
+    }
+
+    .molito{
+        color: black;
+    }
+
+
+    .contact_list{
+        font-size: 28px;
+    }
+
+    img{
+        object-fit: cover;
     }
 }

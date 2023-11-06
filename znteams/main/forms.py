@@ -4,4 +4,4 @@ from .models import Item
 class ItemForm(forms.ModelForm):
     class Meta:
         model = Item
-        fields = ['title', 'image', 'price', 'description']
+        fields = ['title', 'image', 'price', 'description', 'URL']

@@ -7,6 +7,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'main/css/index.css' %} ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 <body>
@@ -14,19 +17,29 @@
         <div class="nav_box">
             <nav>
                 <div class="img_box">
-                    <img class="logo"><a href="">LOGO</a></img>
+                     <a href="{% url 'home' %}"> <img class="logo" src="{% static '/main/images/img.png' %}" alt="Your logo"></a>
+
                 </div>
 
-              <div class="burger">︾</div>
+                <div class="visitor">
+                    <div class="visitor_inner">
+                        <p>👀  {{ visitor_count }}</p>
+                    </div>
+                </div>
+
+                <div class="burger">︾</div>
             </nav>
+
+
 
                 <div class="list_box">
                     <ul class="list">
-                        <li><a href="{% url 'home' %}">Main</a></li>
-                        <li><a href="{% url 'display_items' %}">Projects</a></li>
-                        <li><a href="{% url 'about' %}">About US</a></li>
-                        <li><a href="{% url 'contact' %}">Contact</a></li>
-                        <li><a href="{% url 'service' %}">Services</a></li>
+                        <p class="firts">👀  {{ visitor_count }}</p>
+                        <li><a class="avtive" href="{% url 'home' %}">Main</a></li>
+                        <li><a class="avtive" href="{% url 'display_items' %}">Projects</a></li>
+                        <li><a class="avtive" href="{% url 'about' %}">About US</a></li>
+                        <li><a class="avtive" href="{% url 'contact' %}">Contact</a></li>
+                        <li><a class="avtive" href="{% url 'service' %}">Services</a></li>
                     </ul>
                 </div>
         </div>
@@ -38,9 +51,11 @@
 
 
             <div class="carousel-slide">
-                <img src="img1.jpg" alt="Image 1">
-                <img src="img2.jpg" alt="Image 2">
-                <img src="img3.jpg" alt="Image 3">
+                <img src="{% static '/main/images/1.jpg' %}" alt="web-responsive">
+                <img src="{% static '/main/images/2.jpg' %}" alt="web-responsive">
+                <img src="{% static '/main/images/3.jpg' %}" alt="web-responsive">
+                <img src="{% static '/main/images/4.jpg' %}" alt="web-responsive">
+                <img src="{% static '/main/images/5.jpg' %}" alt="web-responsive">
             </div>
 
             <div class="carousel_btn">

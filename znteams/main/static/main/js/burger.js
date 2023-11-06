@@ -30,3 +30,8 @@ function updateSlidePosition() {
     const slideWidth = slides[currentSlide].clientWidth;
     document.querySelector('.carousel-slide').style.transform = `translateX(-${slideWidth * currentSlide}px)`;
 }
+
+
+
+// active
+
